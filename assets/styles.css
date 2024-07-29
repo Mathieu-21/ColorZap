@@ -9,8 +9,29 @@ button {
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 150px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
   background-color: #0056b3;
+}
+
+body[data-active="true"], button[data-active="true"] {
+  animation: colors 3s linear infinite;
+}
+
+@keyframes colors {
+  0% { background-color: #ff9a9e; }
+  15% { background-color: #fad0c4; }
+  30% { background-color: #fad0c4; }
+  45% { background-color: #fbc2eb; }
+  60% { background-color: #a6c1ee; }
+  75% { background-color: #fbc2eb; }
+  90% { background-color: #f6d365; }
+  100% { background-color: #ff9a9e; }
 }
